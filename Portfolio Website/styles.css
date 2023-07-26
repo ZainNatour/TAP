@@ -8,7 +8,11 @@
 body {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom, gray 70%, pink 30%);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(194, 190, 190) 70%,
+    rgb(106, 63, 161) 30%
+  );
   min-height: 100vh;
 }
 .page-container {
@@ -18,6 +22,8 @@ body {
   min-height: 842px;
   margin: 1.5rem auto;
   background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 8px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 768px) {
   .page-container {
@@ -53,7 +59,7 @@ body {
   flex-direction: column;
   width: 95%;
   margin-left: 30px;
-  background-color: gray;
+  background-color: rgb(194, 190, 190);
   padding-top: 80px;
 }
 .row1 {
@@ -64,11 +70,15 @@ body {
 .row1 h1 {
   font-size: xx-large;
   line-height: 2;
+  font-style: italic;
+}
+.row1 nav {
+  margin-right: 10%;
 }
 .row1 ul {
   list-style: none;
-  margin-right: 10%;
   font-size: small;
+  cursor: default;
 }
 .row2 {
   display: flex;
@@ -92,4 +102,9 @@ body {
   display: flex;
   flex-direction: row;
   margin-left: 30px;
+}
+.section3 .experience,
+.section3 .education {
+  width: calc(49% - 6%);
+  padding: 4px;
 }
